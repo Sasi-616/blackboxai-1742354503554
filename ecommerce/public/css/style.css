@@ -1,0 +1,204 @@
+/* Main Styles for VellankiFoods */
+
+/* Hero Section Placeholder */
+.hero-image {
+    background: linear-gradient(45deg, #4CAF50, #81C784);
+    min-height: 400px;
+    border-radius: 8px;
+}
+
+/* Category Card Placeholders */
+.category-image {
+    background: linear-gradient(45deg, #FF9800, #FFB74D);
+    min-height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Product Image Placeholders */
+.product-image {
+    background: linear-gradient(45deg, #2196F3, #64B5F6);
+    min-height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    z-index: 50;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.toast-success {
+    background-color: #4CAF50;
+}
+
+.toast-error {
+    background-color: #F44336;
+}
+
+.toast-info {
+    background-color: #2196F3;
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover Effects */
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .category-image,
+    .product-image {
+        min-height: 150px;
+    }
+}
+
+/* Form Styles */
+.form-input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.btn-primary {
+    @apply bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition duration-300;
+}
+
+.btn-secondary {
+    @apply bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition duration-300;
+}
+
+/* Card Styles */
+.card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.card-header {
+    @apply p-4 border-b border-gray-200;
+}
+
+.card-body {
+    @apply p-4;
+}
+
+.card-footer {
+    @apply p-4 border-t border-gray-200;
+}
+
+/* Grid Layout */
+.grid-container {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+/* Navigation */
+.nav-link {
+    @apply text-gray-700 hover:text-green-600 transition duration-300;
+}
+
+.nav-link-active {
+    @apply text-green-600 font-semibold;
+}
+
+/* Badge */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+    @apply bg-green-100 text-green-800;
+}
+
+.badge-error {
+    @apply bg-red-100 text-red-800;
+}
+
+.badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Price Tags */
+.price-tag {
+    @apply text-xl font-bold text-green-600;
+}
+
+.price-tag-sale {
+    @apply text-xl font-bold text-red-600;
+}
+
+.price-tag-original {
+    @apply text-sm text-gray-500 line-through;
+}
+
+/* Quantity Controls */
+.quantity-control {
+    @apply flex items-center border rounded-lg overflow-hidden;
+}
+
+.quantity-btn {
+    @apply px-3 py-1 bg-gray-100 hover:bg-gray-200 transition duration-300;
+}
+
+.quantity-input {
+    @apply w-16 text-center border-x py-1;
+}

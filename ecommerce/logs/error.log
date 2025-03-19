@@ -1,0 +1,9 @@
+[19-Mar-2025 04:39:50 UTC] PHP Fatal error:  Uncaught Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in /project/sandbox/user-workspace/ecommerce/app/db.php:16
+Stack trace:
+#0 /project/sandbox/user-workspace/ecommerce/app/db.php(29): Database->__construct()
+#1 /project/sandbox/user-workspace/ecommerce/app/controllers/Controller.php(14): Database::getInstance()
+#2 /project/sandbox/user-workspace/ecommerce/app/controllers/CartController.php(11): Controller->__construct()
+#3 /project/sandbox/user-workspace/ecommerce/public/api.php(168): CartController->__construct()
+#4 /project/sandbox/user-workspace/ecommerce/server.php(9): require_once('...')
+#5 {main}
+  thrown in /project/sandbox/user-workspace/ecommerce/app/db.php on line 16
